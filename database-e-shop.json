@@ -1,0 +1,66 @@
+{
+    "products": [
+      {
+        "id": "1",
+        "name": "buildings",
+        "price": "100",
+        "imageUrl": "https://placeimg.com/640/480/any?t=1579720542118"
+      },
+      {
+        "id": "2",
+        "name": "cat",
+        "price": "200",
+        "imageUrl": "https://placeimg.com/640/480/any?t=1579720644892"
+      },
+      {
+        "id": "3",
+        "name": "dog",
+        "price": "300",
+        "imageUrl": "https://placeimg.com/640/480/any?t=1579720713551"
+      },
+      {
+        "id": "4",
+        "name": "puppy",
+        "price": "400",
+        "imageUrl": "https://placeimg.com/640/480/any?t=1579720747828"
+      },
+      {
+        "id": "5",
+        "name": "bunny",
+        "price": "500",
+        "imageUrl": "https://placeimg.com/640/480/any?t=1579720818742"
+      },
+      {
+        "id": "6",
+        "name": "pigeon",
+        "price": "600",
+        "imageUrl": "https://placeimg.com/640/480/any?t=1579720845043"
+      },
+      {
+        "id": "7",
+        "name": "bird",
+        "price": "700",
+        "imageUrl": " https://placeimg.com/640/480/any?t=1579720928452"
+      },
+      {
+        "id": "8",
+        "name": "turtle",
+        "price": "800",
+        "imageUrl": "https://placeimg.com/640/480/any?t=1579720980435"
+      }
+    ],
+    "shoppingcart": [
+      {
+        "id": "8",
+        "name": "turtle",
+        "price": "800",
+        "imageUrl": "https://placeimg.com/640/480/any?t=1579720980435"
+      },
+      {
+        "id": "3",
+        "name": "dog",
+        "price": "300",
+        "imageUrl": "https://placeimg.com/640/480/any?t=1579720713551"
+      }
+    ]
+  }

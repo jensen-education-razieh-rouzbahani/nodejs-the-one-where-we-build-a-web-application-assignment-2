@@ -1,0 +1,96 @@
+{
+  "products": [
+    {
+      "id": "1",
+      "name": "Tablet",
+      "price": "51.85",
+      "imageUrl": "https://placeimg.com/640/480/tech?t=1579869191799"
+    },
+    {
+      "id": "2",
+      "name": "Ipad Galaxy",
+      "price": "21.10",
+      "imageUrl": "https://placeimg.com/640/480/tech?t=1579868878632"
+    },
+    {
+      "id": "3",
+      "name": "Sumsung Ipad",
+      "price": "50.99",
+      "imageUrl": "https://placeimg.com/640/480/tech?t=1579868849092"
+    },
+    {
+      "id": "4",
+      "name": "Sumsung Ipad",
+      "price": "78.66",
+      "imageUrl": "https://placeimg.com/640/480/tech?t=1579868931952"
+    },
+    {
+      "id": "5",
+      "name": "Camera",
+      "price": "40.00",
+      "imageUrl": "https://placeimg.com/640/480/tech?t=1579876476137"
+    },
+    {
+      "id": "6",
+      "name": "Monitor",
+      "price": "88.22",
+      "imageUrl": "https://placeimg.com/640/480/tech?t=1579876551498"
+    },
+    {
+      "id": "7",
+      "name": "iPhone Xs 64 GB",
+      "price": "98.36",
+      "imageUrl": "https://placeimg.com/640/480/tech?t=1579876696471"
+    },
+    {
+      "id": "8",
+      "name": "Digital Camera",
+      "price": "39.77",
+      "imageUrl": "https://placeimg.com/640/480/tech?t=1579876999052"
+    }
+  ],
+  "shoppingcart": [
+    {
+      "id": "8",
+      "name": "Digital Camera",
+      "price": "39.77",
+      "imageUrl": "https://placeimg.com/640/480/tech?t=1579876999052"
+    },
+    {
+      "id": "6",
+      "name": "Monitor",
+      "price": "88.22",
+      "imageUrl": "https://placeimg.com/640/480/tech?t=1579876551498"
+    },
+    {
+      "id": "7",
+      "name": "iPhone Xs 64 GB",
+      "price": "98.36",
+      "imageUrl": "https://placeimg.com/640/480/tech?t=1579876696471"
+    },
+    {
+      "id": "5",
+      "name": "Camera",
+      "price": "40.00",
+      "imageUrl": "https://placeimg.com/640/480/tech?t=1579876476137"
+    },
+    {
+      "id": "3",
+      "name": "Sumsung Ipad",
+      "price": "50.99",
+      "imageUrl": "https://placeimg.com/640/480/tech?t=1579868849092"
+    },
+    {
+      "id": "1",
+      "name": "Tablet",
+      "price": "51.85",
+      "imageUrl": "https://placeimg.com/640/480/tech?t=1579869191799"
+    },
+    {
+      "id": "2",
+      "name": "Ipad Galaxy",
+      "price": "21.10",
+      "imageUrl": "https://placeimg.com/640/480/tech?t=1579868878632"
+    }
+  ]
+}
