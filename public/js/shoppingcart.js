@@ -1,11 +1,7 @@
-// import {postItem} from "./modules/module.js";
-
 const displayCartContainer = document.querySelector("#cart-list");
-
-// const cartContent = document.querySelector('.cart-content');
  const baseURLShoppingcart = 'http://localhost:8000/api/shoppingcart';
 
-
+//  get the products from shopping cart
 //  const getShoppingcart = () => {
      fetch(baseURLShoppingcart, { method: 'GET' })
      .then((response) => {
@@ -48,7 +44,7 @@ const displayCartContainer = document.querySelector("#cart-list");
             deleteButton.innerHTML = "Remove the item";
 
             
-
+//  delete the product from shopping cart
 
             const deleteProduct = () => {
                 let name = document.getElementById(products[i].name).innerHTML;
