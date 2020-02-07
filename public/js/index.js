@@ -34,6 +34,27 @@ const baseURLShoppingcart = 'http://localhost:8000/api/shoppingcart';
 
  // Check if item is added in the cart. If yes, disable the button and show user "ITEM ADDED" 
 
+ const checkItemInCart = () => {
+    fetch(baseURLShoppingcart, { method: "GET" })
+      .then(response => {
+        return response.json();
+      })
+      .then(data => {
+        data.forEach(data => {
+          console.log(data.name);
+          let itemName = data.name;
+          console.log(itemName);
+          let checkBtn = document.querySelector(itemName);
+          console.log(checkBtn);
+          checkBtn.classList.remove('bag-btn');
+          checkBtn.classList.add("block");
+          checkBtn.disabled = true;
+          checkBtn.innerHTML = "ITEM ADDED";
+        });
+      });
+  };
+  
+
 
 
 // display products
@@ -68,26 +89,7 @@ const baseURLShoppingcart = 'http://localhost:8000/api/shoppingcart';
 
         // h3Elem.classList.add()
 
-        const checkItemInCart = () => {
-            fetch(baseURLShoppingcart, { method: "GET" })
-              .then(response => {
-                return response.json();
-              })
-              .then(data => {
-                data.forEach(data => {
-                  console.log(data.name);
-                  let itemName = data.name;
-                  console.log(itemName);
-                  let checkBtn = document.querySelector(itemName);
-                  console.log(checkBtn);
-                  checkBtn.classList.remove('bag-btn');
-                  checkBtn.classList.add("block");
-                  checkBtn.disabled = true;
-                  checkBtn.innerHTML = "ITEM ADDED";
-                });
-              });
-          };
-          
+        
 
         buttonElem.addEventListener('click', () => {
             postItem(products[i].id, products[i].name, products[i].price, products[i].imageUrl);
@@ -113,12 +115,13 @@ const baseURLShoppingcart = 'http://localhost:8000/api/shoppingcart';
             });
         }
     }
+    checkItemInCart()
 }
 
-window.addEventListener("load", () => {
-    console.log("Page is loaded");
-    checkItemInCart();
-  });
+// window.addEventListener("load", () => {
+//     console.log("Page is loaded");
+//     // checkItemInCart();
+//   });
 
 
 
