@@ -13,12 +13,13 @@ const cartContent = document.querySelector('.cart-content');
 const showProducts = document.querySelector('.display-products');
 const baseURLProducts = 'http://localhost:8000/api/products';
 const baseURLShoppingcart = 'http://localhost:8000/api/shoppingcart';
+// const displayProductContainer = document.getElementById("product-list");
 
 
 
 // getting the products
 
- const get = () => {
+//  const get = () => {
     fetch(baseURLProducts, { method: 'GET' })
     .then((response) => {
         return response.json();
@@ -26,30 +27,14 @@ const baseURLShoppingcart = 'http://localhost:8000/api/shoppingcart';
         console.log('Products: ', data);
         displayProducts(data);
     });
- }
+//  }
 
- get();
+//  get();
 
-//  insert or add product to the shopping cart
 
-const postItem = (id, name, price, image) => {
-    let data = {
-        id: id,
-        name: name,
-        price: price,
-        imageUrl: image
-    }
-    fetch (baseURLShoppingcart, {method: "POST", body: JSON.stringify(data), headers: { 'Content-Type': 'application/json' }})
-    .then(response => {
-        return response.json()
-    }).then(data => {
-        console.log(data);
-        // console.log(data.message);
-         window.alert("Product added");
+ // Check if item is added in the cart. If yes, disable the button and show user "ITEM ADDED" 
 
-        
-    })
-}
+
 
 // display products
 
@@ -75,18 +60,108 @@ const postItem = (id, name, price, image) => {
         articleElem.append(h4Elem);
         showProducts.append(articleElem);
 
-        //Add CSS-classes
+        // //Add CSS-classes
         articleElem.classList.add('product');
         divElem.classList.add('img-container');
         buttonElem.classList.add('bag-btn');
         imageElem.classList.add('product-img');
 
+        // h3Elem.classList.add()
+
+        const checkItemInCart = () => {
+            fetch(baseURLShoppingcart, { method: "GET" })
+              .then(response => {
+                return response.json();
+              })
+              .then(data => {
+                data.forEach(data => {
+                  console.log(data.name);
+                  let itemName = data.name;
+                  console.log(itemName);
+                  let checkBtn = document.querySelector(itemName);
+                  console.log(checkBtn);
+                  checkBtn.classList.remove('bag-btn');
+                  checkBtn.classList.add("block");
+                  checkBtn.disabled = true;
+                  checkBtn.innerHTML = "ITEM ADDED";
+                });
+              });
+          };
+          
+
         buttonElem.addEventListener('click', () => {
             postItem(products[i].id, products[i].name, products[i].price, products[i].imageUrl);
         })
 
+//  insert or add product to the shopping cart
+
+        const postItem = (id, name, price, image) => {
+            let data = {
+                id: id,
+                name: name,
+                price: price,
+                imageUrl: image
+            }
+            fetch (baseURLShoppingcart, {method: "POST", body: JSON.stringify(data), headers: { 'Content-Type': 'application/json' }})
+            .then(response => {
+                return response.json()
+            }).then(data => {
+                console.log(data);
+                // console.log(data.message);
+                checkItemInCart(data);
+                //  window.alert("Product added")        
+            });
+        }
     }
 }
+
+window.addEventListener("load", () => {
+    console.log("Page is loaded");
+    checkItemInCart();
+  });
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
  
