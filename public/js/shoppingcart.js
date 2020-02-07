@@ -18,6 +18,7 @@ const displayCartContainer = document.querySelector("#cart-list");
         displayProductsInShoppingcart(data);
     });
 
+// remove product
 
   //   const deleteProduct = (id, name, price, image) => {
   //     let data = {
