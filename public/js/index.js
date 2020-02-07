@@ -30,7 +30,6 @@ const baseURLShoppingcart = 'http://localhost:8000/api/shoppingcart';
 
  get();
 
-
 //  insert or add product to the shopping cart
 
 const postItem = (id, name, price, image) => {
@@ -54,7 +53,7 @@ const postItem = (id, name, price, image) => {
 
 // display products
 
- displayProducts = (products) => { 
+ const displayProducts = (products) => { 
     for(let i = 0; i < products.length; i++) {
 
         let articleElem = document.createElement('article');
@@ -90,6 +89,6 @@ const postItem = (id, name, price, image) => {
 }
 
 
-
+ 
 
 
