@@ -1,3 +1,5 @@
+  
+
 //  variables
 
 const cartBtn = document.querySelector('.cart-btn');
@@ -107,5 +109,8 @@ const deleteProduct = (id, name, price, image) => {
 
     }
 }
+
+
+
 
 
