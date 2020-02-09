@@ -1,0 +1,21 @@
+Code review:
+
+repository: https://github.com/jenseneducation-sharon-tan/Inlamningsuppgift2
+Project: nodejs-the-one-where-we-build-an-API-assignment-2
+Project owner: Sharon Tan
+
+Three good points:
+
+1. It is really easy to read and understand the code and also it has good comments.
+
+2. Proper names for variables and functions are chosen.
+
+3. It has all the functionalities that are necessary for this assignment
+
+One can be improved:
+
+1. The code would be more well structured if it is divided into different files and modules so
+that it can be easily used in other tasks and have less code in each file.
+
+2. It can also be good and more efficient to take control of the flow and error handling using catch error or 
+try and catch in case some exceptions happen or for some reasons the code doesn't work.

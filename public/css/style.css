@@ -269,3 +269,22 @@
   }
   
   /* --------------- End of Cart ---------------- */
+
+  .item button {
+    background-color: sandybrown;
+    width: 50px;
+    height: 30px;
+    font-size: 0.7em;
+  }
+
+  .cart-content {
+    display: grid;
+    grid-template-columns: 1fr;
+  }
+
+  .item img {
+    width: 75px;
+    height: 75px;
+  }
+
+  
