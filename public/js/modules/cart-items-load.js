@@ -2,7 +2,7 @@ import { removeShoppingcartItem } from '../shoppingcart.js';
 
 
 
-// display shopping cart items
+// displays shopping cart items
 
 export const displayShoppingcartProducts = (cartItems) => {
     let shoppingcartFragment = document.createDocumentFragment(); //Elements will be added to this fragmnet before added to DOM
@@ -11,13 +11,13 @@ export const displayShoppingcartProducts = (cartItems) => {
         cartItem.classList.add('item');
         cartItem.id = 'item ' + cartItems[i].id; // unique id for easy removal
 
-        // Append to parent div (item)
+        // Appends to parent div (item)
         addImage(cartItem, cartItems, i);
         addTitle(cartItem, cartItems, i);
         addPrice(cartItem, cartItems, i);
         addButton(cartItem, cartItems, i);
 
-        shoppingcartFragment.appendChild(cartItem); // Add the built item to fragment
+        shoppingcartFragment.appendChild(cartItem); // Adds the built item to fragment
     }
     document.querySelector('.cart-content').appendChild(shoppingcartFragment); //writes the items on DOM
 };

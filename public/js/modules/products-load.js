@@ -2,7 +2,7 @@ import { addItemToshoppingCart } from '../index.js';
 
 const baseURLShoppingcart = 'http://localhost:8000/api/shoppingcart';
 
-// display products on html page
+// displays products on html page
 
 export const displayProducts = (products) => { 
     let productFragment = document.createDocumentFragment();

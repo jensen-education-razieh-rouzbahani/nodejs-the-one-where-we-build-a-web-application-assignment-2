@@ -1,6 +1,6 @@
-import { displayShoppingcartProducts } from './modules/cart-items-load.js/index.js.js';
-import { updateTotalPrice, totalPrice } from './modules/shoppingcart-calculation';
-// import { totalPrice } from './modules/shoppingcart-calculation';
+import { displayShoppingcartProducts } from './modules/cart-items-load.js';
+import { updateTotalPrice, totalPrice } from './modules/shoppingcart-calculation.js';
+
 
 
  const baseURLShoppingcart = 'http://localhost:8000/api/shoppingcart';
@@ -17,7 +17,7 @@ import { updateTotalPrice, totalPrice } from './modules/shoppingcart-calculation
             console.log(data.name);    
         });
         displayShoppingcartProducts(data);
-        // totalPrice(data);
+        totalPrice(data);
     }).catch((error) => {
       console.error('Error: ', error);
     });
@@ -28,8 +28,7 @@ import { updateTotalPrice, totalPrice } from './modules/shoppingcart-calculation
 
 // removes product in the shopping cart
 export const removeShoppingcartItem = (id) => {
-  // fetch(baseURLShoppingcart + '/' + id, {method: 'DELETE'})
-  fetch(baseURLShoppingcart, {method: 'DELETE'})  
+  fetch(baseURLShoppingcart, {method: 'DELETE', body: JSON.stringify({id: id})}) 
   .then((response) => {
     return response.json();
   }).then((data) => {
