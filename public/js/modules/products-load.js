@@ -78,7 +78,7 @@ const checkIfInCart = async productId => {
     let cartId = await fetchCartId(productId);
     if (cartId) {
       document.querySelector('#button-' + cartId).innerHTML =
-        'Product already in cart';
+        'already in cart';
     }
   };
 

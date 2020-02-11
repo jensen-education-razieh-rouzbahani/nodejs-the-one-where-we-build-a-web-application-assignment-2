@@ -28,12 +28,12 @@ import { updateTotalPrice, totalPrice } from './modules/shoppingcart-calculation
 
 // removes product in the shopping cart
 export const removeShoppingcartItem = (id) => {
-  fetch(baseURLShoppingcart, {method: 'DELETE', body: JSON.stringify({id: id})}) 
+  fetch(baseURLShoppingcart, {method: 'DELETE', headers: {'Content-Type': 'application/json'}, body: JSON.stringify({id: id})}) 
   .then((response) => {
     return response.json();
   }).then((data) => {
     console.log(data);
-    let item = document.getElementById('item' + id);
+    let item = document.getElementById('item ' + id);
     console.log(item);
     item.parentNode.removeChild(item); // removes item
     updateTotalPrice(); // updates the total price

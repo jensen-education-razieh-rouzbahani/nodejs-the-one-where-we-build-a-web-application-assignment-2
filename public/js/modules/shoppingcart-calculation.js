@@ -18,5 +18,5 @@ export const updateTotalPrice = () => {
       let sum = parseInt(data[i].price);
       total += sum;
     }
-    document.querySelector('.cart-total').innerHTML = 'Total: ' + '$' + total;
+    document.querySelector('.cart-total').innerHTML = ' Your Total: ' + '$' + total;
   };
